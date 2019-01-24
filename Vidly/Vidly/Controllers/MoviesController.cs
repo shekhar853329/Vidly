@@ -12,9 +12,6 @@ namespace Vidly.Controllers
             {
                 Name = "Shrek"
             };
-            //return View(Movie);
-            //return Content("hello world");
-            //return HttpNotFound();
             return View(Movie);
         }
 
@@ -36,6 +33,11 @@ namespace Vidly.Controllers
             }
 
             return Content(string.Format("PageIndex={0},sortBy={1}", pageIndex, sortBy));
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
         }
     }
 }
